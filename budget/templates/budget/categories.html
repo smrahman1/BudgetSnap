@@ -1,0 +1,42 @@
+{% extends "budget/base.html"%}
+{% block content %}
+  <h2>Total: ${{total.sum}}</h2>
+  {% for listing in listings %}
+    {% if listing.author == user %}
+      <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2">{{ listing.category }}</a>
+                <small class="text-muted">{{ listing.date_purchased|date:"F d, Y" }}</small>
+            </div>
+            <h2><a class="article-title">{{ listing.title }}</a></h2>
+            <h3>$<a class="article-title">{{ listing.expense }}</a></h3>
+            <p class="article-content">{{ listing.details }}</p>
+            <a class= "btn-outline-info btn btn-sm " style="font-size: 0.7em;" href="{% url 'listing-delete' listing.id %}">Delete</a>
+            <a class= "btn-outline-info btn btn-sm " style="font-size: 0.7em;" href="{% url 'listing-update' listing.id %}">Update</a>
+          </div>
+      </article>
+      {% endif %}
+  {% endfor %}
+  {% if listings.has_other_pages %}
+    <ul  class="pagination">
+  {% if listings.has_previous %}
+    <li><a class="btn btn-outline-info mb-4" href="?page={{ listings.previous_page_number }}">&laquo;</a></li>
+  {% else %}
+    <li class="disabled"><span>&laquo;</span></li>
+  {% endif %}
+  {% for i in listings.paginator.page_range %}
+    {% if listings.number == i %}
+      <li class="btn btn-outline-info mb-4"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+    {% else %}
+      <li><a class="btn btn-outline-info mb-4" href="?page={{ i }}">{{ i }}</a></li>
+    {% endif %}
+  {% endfor %}
+  {% if listings.has_next %}
+    <li><a class="btn btn-outline-info mb-4" href="?page={{ listings.next_page_number }}">&raquo;</a></li>
+  {% else %}
+    <li class="disabled"><span>&raquo;</span></li>
+  {% endif %}
+</ul>
+  {% endif %}
+{% endblock content%}

@@ -1,0 +1,32 @@
+{% extends "budget/base.html"%}
+{% block content %}
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Category</th>
+            <th scope="col">Title</th>
+            <th scope="col">Details</th>
+            <th scope="col">Price</th>
+            <th scope="col">Date</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for listing in listings %}
+                {% if listing.author == user %}
+                    <tr>
+                        <th scope="row">{{ listing.category }}</th>
+                        <td>{{ listing.title }}</td>
+                        <td>{{ listing.details }}</td>
+                        <td>${{ listing.expense }}</td>
+                        <td>{{ listing.date_purchased|date:"F d, Y" }}</td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+                <th scope="row">Total:</th>
+                <td></td>
+                <td></td>
+                <td> ${{ total.sum }}</td> 
+                <td></td>
+        </tbody>
+    </table>
+{% endblock content%}
