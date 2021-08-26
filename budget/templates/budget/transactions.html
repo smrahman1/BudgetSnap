@@ -1,6 +1,6 @@
 {% extends "budget/base.html"%}
 {% block content %}
-  {% if total.sum != 0 %}
+{% if total.sum != None %}
     <h2>Total: ${{total.sum}}</h2> 
   {% else %}
     <h2>Add a new transaction!</h2>
