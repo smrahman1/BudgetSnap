@@ -25,7 +25,9 @@
             <th scope="row">Total:</th>
             <td></td>
             <td></td>
-            <td> ${{ total.sum }}</td> 
+            {% if total.sum != None %}
+                <td> ${{ total.sum }}</td> 
+            {% endif %}
             <td></td>
         </tbody>
     </table>
