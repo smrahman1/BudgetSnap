@@ -22,11 +22,13 @@
                     </tr>
                 {% endif %}
             {% endfor %}
-                <th scope="row">Total:</th>
-                <td></td>
-                <td></td>
+            <th scope="row">Total:</th>
+            <td></td>
+            <td></td>
+            {% if total.sum != 0 %}
                 <td> ${{ total.sum }}</td> 
-                <td></td>
+            {% endif %}
+            <td></td>
         </tbody>
     </table>
 {% endblock content%}

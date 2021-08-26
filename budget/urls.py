@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import ListingCategories, ListingList, ListingListCategories, ListingListView, ListingCreateView, ListingDeleteView, ListingUpdateView, ListingListView2
+from .views import ListingCreateView, ListingDeleteView, ListingUpdateView
 from . import views
 
 urlpatterns = [

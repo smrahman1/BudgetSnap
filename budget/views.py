@@ -1,7 +1,6 @@
 from django import forms
 from django.shortcuts import render
-from django.views.generic import ListView, CreateView, DeleteView, UpdateView
-from django.contrib.auth.models import User
+from django.views.generic import CreateView, DeleteView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import Post
 from datetime import datetime
