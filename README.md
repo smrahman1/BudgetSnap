@@ -2,6 +2,15 @@
 <https://budgetsnap.herokuapp.com>
 
 
+## Screenshots
+New Transaction Page
+<img width="1278" alt="Screen Shot 2022-02-18 at 9 50 18 AM" src="https://user-images.githubusercontent.com/56134792/154705532-036e1c36-0c07-4525-a039-2cacf26374de.png">
+
+List View
+<img width="1278" alt="Screen Shot 2022-02-18 at 9 52 52 AM" src="https://user-images.githubusercontent.com/56134792/154706014-2c80b134-cc3f-41cf-8d9a-ed7aef983ff3.png">
+
+
+
 ## The Application
 This application allows a user to keep track of their expenses and profits in one location. There are several features incorporated into the application for the convenience of the users. The user must register an account and sign in to use the tracker. They can then create new transactions, view their monthly expenses/profits, and view all their transactions in a variety of ways (See View Options below). All the transactions are stored in a database so that each user can access their own transactions again by logging into the app. 
 
