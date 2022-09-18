@@ -14,7 +14,7 @@ List View
 ## The Application
 This application allows a user to keep track of their expenses and profits in one location. There are several features incorporated into the application for the convenience of the users. The user must register an account and sign in to use the tracker. They can then create new transactions, view their monthly expenses/profits, and view all their transactions in a variety of ways (See View Options below). All the transactions are stored in a database so that each user can access their own transactions again by logging into the app. 
 
-The application was created with HTML, Bootstrap, Python, and Django. It is deployed with Heroku and all the transaction and profile data is stored in a PostgresQL database.  
+The application was created with HTML, Bootstrap, Python, and Django. It is deployed with Heroku and all the transaction and profile data is stored in a PostgreSQL database.  
 
 ## Inspiration
 For the last few years, Starr Decor, a balloon decor business I co-founded, used programs such as Apple's native Notes app to keep track of earnings as well as expenses from the business. This method of keeping track of transactions was inefficient and made it difficult to manage with multiple people. For this reason I created a web application that was customized for the needs of the company but could also be used by others around the world. The inspiration for some of the features below such as the view options and the categories were directly related to the needs for this business (they have been updated to reach a larger audience).
