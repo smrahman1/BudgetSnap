@@ -1,5 +1,4 @@
 # BudgetSnap - Budget Tracker Web Application
-<https://budgetsnap.herokuapp.com>
 
 
 ## Screenshots
